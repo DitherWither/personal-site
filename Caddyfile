@@ -1,0 +1,11 @@
+
+:80 {
+	root * /srv/www
+
+	file_server
+}
+
+:8080 {
+	# Reverse proxy to our nextcloud instance
+	reverse_proxy http://nextcloud:80
+}
