@@ -1,3 +1,15 @@
+# v0.0.2 (Thu May 18 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Remove unnessecary flask app ([@DitherWither](https://github.com/DitherWither))
+
+#### Authors: 1
+
+- Vardhan Patil ([@DitherWither](https://github.com/DitherWither))
+
+---
+
 # v0.0.1 (Thu May 18 2023)
 
 :tada: This release contains work from a new contributor! :tada:
