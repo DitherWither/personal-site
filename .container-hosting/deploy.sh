@@ -165,6 +165,7 @@ echo Set app envrionment settings
 
 amber exec -- sh -c ''"ssh $SSH_ARGS"' dokku@$DOKKU_HOST -C $CONTAINER_HOSTING_API_KEY \
     dokku config:set --no-restart $APP_NAME \
+    $POSTGRES_PASSWORD=$POSTGRES_PASSWORD\
     DB_USER=$DB_USER\
     DB_PASSWORD=$DB_PASSWORD\
     DB_HOST=$DB_HOST\
