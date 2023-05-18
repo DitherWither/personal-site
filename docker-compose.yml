@@ -1,39 +1,26 @@
 version: '3'
 
 services:
-  redis:
-    image: redis:alpine
-    restart: always
-
   app:
     image: nextcloud:apache
-    restart: always
-    volumes:
-      - nextcloud:/var/www/html:z
+    tty: true
+    labels:
+      kr.ingress.80: https://nextcloud.*
+    ports:
+      - 80:80
     environment:
       - POSTGRES_HOST=ep-little-night-646914.us-east-2.aws.neon.tech
       - POSTGRES_USER=nextcloud
       - POSTGRES_DB=nextcloud
-      - REDIS_HOST=redis
-      - POSTGRES_PASSWORD
-    depends_on:
-      - redis
-
-  cron:
-    image: nextcloud:apache
-    restart: always
-    volumes:
-      - nextcloud:/var/www/html:z
-    entrypoint: /cron.sh
-    depends_on:
-      - redis
+    env_file:
+      - db.env
 
   caddy:
-    build: .
+    image: ditherwither/personal-site:latest
     restart: always
-    ports:
-      - 80:80
-      - 8080:8080
+    tty: true
+    labels:
+      kr.ingress.80: https://www.*
     volumes:
       - caddy:/data
     links:
