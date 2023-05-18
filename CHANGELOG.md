@@ -1,3 +1,17 @@
+# v0.0.3 (Thu May 18 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/DitherWither/personal-site ([@DitherWither](https://github.com/DitherWither))
+- Revert "Revert back to "Move db to neon"" ([@DitherWither](https://github.com/DitherWither))
+- Revert back to "Move db to neon" ([@DitherWither](https://github.com/DitherWither))
+
+#### Authors: 1
+
+- Vardhan Patil ([@DitherWither](https://github.com/DitherWither))
+
+---
+
 # v0.0.2 (Thu May 18 2023)
 
 #### ⚠️ Pushed to `main`
